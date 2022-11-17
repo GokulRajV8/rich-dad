@@ -14,6 +14,7 @@ create table richdad_test.expense_data (
   description varchar(1000) not null,
   amount decimal(14, 2) not null,
   currency_id int not null,
+  entry_date date not null,
   primary key (id),
   foreign key (currency_id) references richdad_test.currency_data(id)
 );
@@ -31,4 +32,11 @@ create table richdad_test.expense_category_map (
   expense_category_id int not null,
   foreign key (expense_id) references richdad_test.expense_data(id),
   foreign key (expense_category_id) references richdad_test.expense_category_data(id)
+);
+
+create table richdad_test.expense_replaced_data (
+  original_id int not null,
+  replaced_id int not null,
+  foreign key (original_id) references richdad_test.expense_data(id),
+  foreign key (replaced_id) references richdad_test.expense_data(id)
 );
