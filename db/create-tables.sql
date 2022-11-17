@@ -1,4 +1,5 @@
 drop table richdad_test.expense_category_map;
+drop table richdad_test.expense_replaced_data;
 drop table richdad_test.expense_data;
 drop table richdad_test.expense_category_data;
 drop table richdad_test.currency_data;
