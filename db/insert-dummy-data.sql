@@ -71,6 +71,12 @@ select 6, 5 from dual;
 insert into richdad_test.expense_category_map
 select 7, 5 from dual;
 
+insert into richdad_test.expense_category_map
+select 8, 2 from dual;
+
+insert into richdad_test.expense_category_map
+select 8, 3 from dual;
+
 /* Insert expense-replaced data */
 
 insert into richdad_test.expense_replaced_data
